@@ -13,7 +13,7 @@
     },
 ``` 
 
-3. After saving changes, either wait for the cron job to run (this repo's job runs at 00:00, 03:00, 06:00, 09:00, 12:00, 15:00 and 18:00), or start the `LinkGrabber` workflow manually (repo > Actions tab > YouTubeToURL > Run workflow).
+3. After saving changes, either wait for the cron job to run (this repo's job runs at 00:00, 03:00, 06:00, 09:00, 12:00, 15:00 and 18:00), or start the `YouTubeToURL` workflow manually (repo > Actions tab > YouTubeToURL > Run workflow).
 
 You can also run the program locally by `code/main.py`.
 
