@@ -1,7 +1,7 @@
 {
   "output": {
-    "folder": "./YouTubeToURL/output/streams",
-    "bestFolder": "./YouTubeToURL/output/streams/best",
+    "folder": "output",
+    "bestFolder": "best",
     "masterFolder": ""
   },
   "channels": [
