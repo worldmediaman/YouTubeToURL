@@ -3,9 +3,6 @@
 echo $(dirname $0)
 
 python3 -m pip install requests
-
-python -m pip install --upgrade pip
-          
 pip3 install -r code/requirements.txt
       - name: execute py script 
         run: python code/main.py input/config.json
