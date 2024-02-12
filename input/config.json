@@ -1,6 +1,6 @@
 {
   "output": {
-    "folder": "YouTubeToUrl/output/streams",
+    "folder": "output/streams",
     "bestFolder": "best",
     "masterFolder": ""
   },
