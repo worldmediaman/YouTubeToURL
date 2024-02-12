@@ -8,7 +8,7 @@ python -m pip install --upgrade pip
           
 pip3 install -r code/requirements.txt
       - name: execute py script 
-        run: python YouTubeToURL/code/main.py YouTubeToURL/input/config.json
+        run: python code/main.py input/config.json
       - name: commit and push files
       
         run: |
