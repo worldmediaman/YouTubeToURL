@@ -2,7 +2,7 @@ name: YouTubeToURL
 
 on:
   schedule:
-   - cron: '*/5 * * * *'
+   - cron: '0 */1 * * *'
     
   pull_request:
     branches: [ master ]
