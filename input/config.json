@@ -186,6 +186,11 @@
       "url": "https://www.youtube.com/@haberturktv/live"
     },
     {
+      "name": "HALK TV",
+      "slug": "halktv",
+      "url": "https://www.youtube.com/@Halktvkanali/streams/live"
+    },
+    {
       "name": "Hanım Köylü",
       "slug": "hanimkoylu",
       "url": "https://www.youtube.com/@HanimKoyluDizi/live"
