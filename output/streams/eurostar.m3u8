@@ -1,8 +1,8 @@
 #EXTM3U
 #EXT-X-VERSION:3
 #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=3000000,CODECS="",RESOLUTION=1920x1080
-http://mn-nl.mncdn.com/dogusdyg_eurostar/live_1080p3000000kbps/index.m3u8?st=D6vQ5NLy7C9X2xtYNANI8g&e=1727604538
+http://mn-nl.mncdn.com/dogusdyg_eurostar/live_1080p3000000kbps/index.m3u8?st=dD1zL2own7gbz74zhf-4EA&e=1727608125
 #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1500000,CODECS="",RESOLUTION=1280x720
-http://mn-nl.mncdn.com/dogusdyg_eurostar/live_720p1500000kbps/index.m3u8?st=D6vQ5NLy7C9X2xtYNANI8g&e=1727604538
+http://mn-nl.mncdn.com/dogusdyg_eurostar/live_720p1500000kbps/index.m3u8?st=dD1zL2own7gbz74zhf-4EA&e=1727608125
 #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=90000,CODECS="",RESOLUTION=854x480
-http://mn-nl.mncdn.com/dogusdyg_eurostar/live_480p90000kbps/index.m3u8?st=D6vQ5NLy7C9X2xtYNANI8g&e=1727604538
+http://mn-nl.mncdn.com/dogusdyg_eurostar/live_480p90000kbps/index.m3u8?st=dD1zL2own7gbz74zhf-4EA&e=1727608125
