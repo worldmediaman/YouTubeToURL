@@ -1,8 +1,8 @@
 #EXTM3U
 #EXT-X-VERSION:3
-#EXT-X-STREAM-INF:BANDWIDTH=3200000,CODECS="",RESOLUTION=1920x1080
-http://creative-p3.mncdn.com/smil:geoblock3-star_smil.smil/chunklist_b3192000.m3u8?st=Kp5beDrlTLNyU6oO3Vw--Q&e=1728148137
-#EXT-X-STREAM-INF:BANDWIDTH=1700000,CODECS="",RESOLUTION=1280x720
-http://creative-p3.mncdn.com/smil:geoblock3-star_smil.smil/chunklist_b1660000.m3u8?st=Kp5beDrlTLNyU6oO3Vw--Q&e=1728148137
-#EXT-X-STREAM-INF:BANDWIDTH=540000,CODECS="",RESOLUTION=640x360
-http://creative-p3.mncdn.com/smil:geoblock3-star_smil.smil/chunklist_b536000.m3u8?st=Kp5beDrlTLNyU6oO3Vw--Q&e=1728148137
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=3000000,CODECS="",RESOLUTION=1920x1080
+http://mn-nl.mncdn.com/dogusdyg_star/live_1080p3000000kbps/index.m3u8?st=lisXG8amLLgbwx18iYeBIA&e=1728151980
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1500000,CODECS="",RESOLUTION=1280x720
+http://mn-nl.mncdn.com/dogusdyg_star/live_720p1500000kbps/index.m3u8?st=lisXG8amLLgbwx18iYeBIA&e=1728151980
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=90000,CODECS="",RESOLUTION=854x480
+http://mn-nl.mncdn.com/dogusdyg_star/live_480p90000kbps/index.m3u8?st=lisXG8amLLgbwx18iYeBIA&e=1728151980
