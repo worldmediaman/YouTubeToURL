@@ -1,4 +1,4 @@
 #EXTM3U
 #EXT-X-VERSION:3
-#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=3000000,CODECS="",RESOLUTION=1920x1080
-http://mn-nl.mncdn.com/dogusdyg_eurostar/live_1080p3000000kbps/index.m3u8?st=W8kHA8XiH0TeqB697o1exA&e=1728144768
+#EXT-X-STREAM-INF:BANDWIDTH=3200000,CODECS="",RESOLUTION=1920x1080
+http://creative-p3.mncdn.com/smil:geoblock3-star_smil.smil/chunklist_b3192000.m3u8?st=Kp5beDrlTLNyU6oO3Vw--Q&e=1728148137
