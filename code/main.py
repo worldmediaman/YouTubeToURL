@@ -1,3 +1,19 @@
+import os
+from googleapiclient.discovery import build
+
+api_key = os.getenv('YOUTUBE_API_KEY')
+youtube = build('youtube', 'v3', developerKey=api_key)
+
+# Beispiel: Abrufen von Videoinformationen
+request = youtube.videos().list(
+    part="snippet,contentDetails,statistics",
+    id="VIDEO_ID"
+)
+response = request.execute()
+print(response)
+
+
+
 import streamlink
 import sys
 import os 
