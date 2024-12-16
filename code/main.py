@@ -2,6 +2,7 @@ import streamlink
 import sys
 import os 
 import json
+from googleapiclient.discovery import build
 
 def info_to_text(stream_info, url):
     text = '#EXT-X-STREAM-INF:'
@@ -23,6 +24,15 @@ def info_to_text(stream_info, url):
     text = text + "\n" + url + "\n"
     return text
 
+def get_youtube_video_info(api_key, video_id):
+    youtube = build('youtube', 'v3', developerKey=api_key)
+    request = youtube.videos().list(
+        part="snippet,contentDetails,statistics",
+        id=video_id
+    )
+    response = request.execute()
+    return response
+
 def main():
     # Loading config file
     f = open(sys.argv[1], "r")
@@ -38,6 +48,9 @@ def main():
     master_folder = os.path.join(root_folder, master_folder_name)
     os.makedirs(best_folder, exist_ok=True)
     os.makedirs(master_folder, exist_ok=True)
+
+    # YouTube API key
+    api_key = os.getenv('YOUTUBE_API_KEY')
 
     channels = config["channels"]
     for channel in channels:
@@ -111,4 +124,4 @@ def main():
                 os.remove(best_file_path)
 
 if __name__=="__main__": 
-    main() 
+    main()
