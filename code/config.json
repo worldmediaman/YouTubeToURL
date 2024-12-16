@@ -1,6 +1,6 @@
 {
   "output": {
-    "folder": "output",
+    "folder": "output/streams",
     "bestFolder": "best",
     "masterFolder": ""
   },
@@ -31,14 +31,14 @@
       "url": "www.youtube.com/@ASpor/live"
     },
     {
-      "name": "A Para",
-      "slug": "apara",
-      "url": "https://www.youtube.com/@apara/live"
+      "name": "NOW",
+      "slug": "now",
+      "url": "https://www.nowtv.com.tr/canli-yayin"
     },
     {
       "name": "NOW",
       "slug": "now",
-      "url": "https://www.youtube.com/@nowtvturkiye/live"
+      "url": "https://www.youtube.com/@nowtvturkiye"
     },
     {
       "name": "Kemal Sunal Filmleri",
@@ -186,14 +186,14 @@
       "url": "https://www.youtube.com/@haberturktv/live"
     },
     {
-      "name": "Hanım Köylü",
-      "slug": "hanimkoylu",
-      "url": "https://www.youtube.com/@HanimKoyluDizi/live"
-    },
-    {
       "name": "HALK TV",
       "slug": "halktv",
       "url": "https://www.youtube.com/@Halktvkanali/live"
+    },
+    {
+      "name": "Hanım Köylü",
+      "slug": "hanimkoylu",
+      "url": "https://www.youtube.com/@HanimKoyluDizi/live"
     },
     {
       "name": "Hayat Bazen Tatlıdır",
@@ -224,7 +224,7 @@
       "name": "KRAL TV",
       "slug": "kraltv",
       "url": "https://www.youtube.com/@kralmuzik/streams/live"
-    },
+    },  
     {
       "name": "Kanal 5",
       "slug": "kanal5",
@@ -366,14 +366,14 @@
       "url": "https://www.youtube.com/@tgrthaber/live"
     },
     {
-      "name": "Trabzon TV",
-      "slug": "trabzontv",
-      "url": "https://www.twitch.tv/trabzontv"
-    },
-    {
       "name": "Tolg",
       "slug": "tolg",
       "url": "https://www.youtube.com/@25FilmTR/live"
+    },
+    {
+      "name": "Trabzon TV",
+      "slug": "trabzontv",
+      "url": "https://www.twitch.tv/trabzontv"
     },
     {
       "name": "TRT Haber",
