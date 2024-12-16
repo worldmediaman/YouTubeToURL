@@ -1,24 +1,7 @@
-import os
-from googleapiclient.discovery import build
-
-api_key = os.getenv('YOUTUBE_API_KEY')
-youtube = build('youtube', 'v3', developerKey=api_key)
-
-# Beispiel: Abrufen von Videoinformationen
-request = youtube.videos().list(
-    part="snippet,contentDetails,statistics",
-    id="VIDEO_ID"
-)
-response = request.execute()
-print(response)
-
-
-
 import streamlink
 import sys
 import os 
 import json
-
 def info_to_text(stream_info, url):
     text = '#EXT-X-STREAM-INF:'
     if stream_info.program_id:
@@ -35,15 +18,12 @@ def info_to_text(stream_info, url):
         text = text + '",'
     if stream_info.resolution.width:
         text = text + 'RESOLUTION=' + str(stream_info.resolution.width) + 'x' + str(stream_info.resolution.height) 
-
     text = text + "\n" + url + "\n"
     return text
-
 def main():
     # Loading config file
     f = open(sys.argv[1], "r")
     config = json.load(f)
-
     # Getting output options and creating folders
     folder_name = config["output"]["folder"]
     best_folder_name = config["output"]["bestFolder"]
@@ -54,7 +34,6 @@ def main():
     master_folder = os.path.join(root_folder, master_folder_name)
     os.makedirs(best_folder, exist_ok=True)
     os.makedirs(master_folder, exist_ok=True)
-
     channels = config["channels"]
     for channel in channels:
         # Get streams and playlists
@@ -62,18 +41,15 @@ def main():
             url = channel["url"]
             streams = streamlink.streams(url)
             playlists = streams['best'].multivariant.playlists
-
             # Text preparation
             previous_res_height = 0
             master_text = ''
             best_text = ''
-
             # Check http/https options
             http_flag = False
             if url.startswith("http://"):
                 plugin_name, plugin_type, given_url  = streamlink.session.Streamlink().resolve_url(url)
                 http_flag = True
-
             for playlist in playlists:
                 uri = playlist.uri
                 info = playlist.stream_info
@@ -94,22 +70,18 @@ def main():
                     best_text = '#EXT-X-VERSION:' + str(streams['best'].multivariant.version) + "\n" + best_text
                 master_text = '#EXTM3U\n' + master_text
                 best_text = '#EXTM3U\n' + best_text
-
             # HTTPS -> HTTP for cinergroup plugin
             if http_flag:
                 if plugin_name == "cinergroup":
                     master_text = master_text.replace("https://", "http://")
                     best_text = best_text.replace("https://", "http://")
-
             # File operations
             master_file_path = os.path.join(master_folder, channel["slug"] + ".m3u8")
             best_file_path = os.path.join(best_folder, channel["slug"] + ".m3u8")
-
             if master_text:
                 master_file = open(master_file_path, "w+")
                 master_file.write(master_text)
                 master_file.close()
-
                 best_file = open(best_file_path, "w+")
                 best_file.write(best_text)
                 best_file.close()
@@ -125,6 +97,5 @@ def main():
                 os.remove(master_file_path)
             if os.path.isfile(best_file_path):
                 os.remove(best_file_path)
-
 if __name__=="__main__": 
     main() 
