@@ -2,12 +2,11 @@ name: YouTubeToURL
 
 on:
   schedule:
-   - cron: '0 */1 * * *'
-    
+    - cron: '0 */1 * * *'
   pull_request:
     branches: [ master ]
-
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,19 +15,22 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-            python-version: '3.x' 
+          python-version: '3.x' 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          
           pip3 install -r code/requirements.txt
       - name: execute py script 
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python code/main.py input/config.json
       - name: commit and push files
-      
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --global user.email "<>"
+          git config --global user.email "your-email@example.com"
           git config --local user.name "master bot"
+          git pull origin main
           git add -A
-          git commit -m " Update"
-          git push
+          git commit -m "Update"
+          git push origin main
